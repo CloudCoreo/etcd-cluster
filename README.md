@@ -104,6 +104,10 @@ When a failure takes place, the Autoscaling group will replace the failed node. 
 1. High Availability
 1. Shared Configuration
 
+## Categories
+
+1. Servers
+
 ## Diagram
 ![alt text](https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/etcd-diagram.png "etcd Cluster Diagram")
 
