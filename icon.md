@@ -1,0 +1,1 @@
+![icon](https://raw.githubusercontent.com/CloudCoreo/etcd-cluster/master/images/icon.png "icon")
