@@ -42,7 +42,7 @@ variables:
         default: 2.2.0
     ETCD_CLUSTER_AMI:
         description: the ami to launch for the etcd cluster - default is Amazon Linux AMI 2015.03 (HVM), SSD Volume Type
-        switch: INSTANCE::region
+        switch: PLAN::region
         cases:
             us-east-1: ami-1ecae776
             us-west-1: ami-d114f295
