@@ -108,7 +108,7 @@ When a failure takes place, the Autoscaling group will replace the failed node. 
 
 
 
-## Optional variables with no default
+## Optional variables with default
 
 ### `ETCD_ELB_LISTENERS`:
   * description: The listeners to apply to the ELB
@@ -141,7 +141,7 @@ When a failure takes place, the Autoscaling group will replace the failed node. 
   * default: true
 
 
-## Optional variables with default
+## Optional variables with no default
 
 ### `VPC_SEARCH_TAGS`:
   * description: if you have more than one VPC with the same CIDR, and it is not under CloudCoreo control, we need a way to find it. Enter some unique tags that exist on the VPC you want us to find. ['env=production','Name=prod-vpc']
