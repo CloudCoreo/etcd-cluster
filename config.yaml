@@ -8,11 +8,12 @@ variables:
         description: the dns zone (eg. example.com)
         type: String
         required: true
+        default: cloudcoreo.com
     VPC_CIDR:
         description: the cloudcoreo defined vpc to add this cluster to
         type: String
         required: true
-        default: 10.1.0.0/16
+        default: 10.11.0.0/16
     VPC_SEARCH_TAGS:
         description: if you have more than one VPC with the same CIDR, and it is not under CloudCoreo control, we need a way to find it. Enter some unique tags that exist on the VPC you want us to find. ['env=production','Name=prod-vpc']
         type: Array
@@ -39,7 +40,7 @@ variables:
         description: etcd version
         type: String
         required: true
-        default: 2.2.0
+        default: 3.2.7
     ETCD_CLUSTER_AMI:
         description: the ami to launch for the etcd cluster - default is Amazon Linux AMI 2015.03 (HVM), SSD Volume Type
         switch: PLAN::region
