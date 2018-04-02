@@ -11,4 +11,19 @@
 ## end
 ##
 
+coreo_uni_util_jsrunner "ip-splitter" do
+  action :run
+  data_type "text"
+  json_input '{}'
+  function <<-EOH
+var out = "COMPOSITE::coreo_aws_ec2_autoscaling.${CLUSTER_NAME}.private_ip_addresses".replace(/,/g, "\\",\\"");
+callback(out);
+  EOH
+end
 
+coreo_aws_route53_record "${CLUSTER_NAME}-private" do
+  action :sustain
+  type "A"
+  zone "${DNS_ZONE}"
+  values ['COMPOSITE::coreo_uni_util_jsrunner.ip-splitter.return']
+end
